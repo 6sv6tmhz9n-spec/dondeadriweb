@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; base-uri 'self'; form-action 'none'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline' https://va.vercel-scripts.com; connect-src https://va.vercel-scripts.com; base-uri 'self'; form-action 'none'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Donde Adri — Pastelería y Cafetería · Cartago, Costa Rica</title>
 <meta name="description" content="Donde Adri: pastelería artesanal y café de especialidad en Cartago, Costa Rica. Repostería, desayunos, almuerzos e infusiones de flores. Pedidos por WhatsApp." />
@@ -1304,6 +1304,10 @@ body.edit-mode img:hover { outline-color: #2563eb; filter: brightness(0.85); }
 #splash.hide #splash-skip{opacity:0}
 
 </style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <div id="splash" aria-label="Cargando Donde Adri">
