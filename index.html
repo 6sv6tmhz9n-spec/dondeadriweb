@@ -2168,9 +2168,6 @@ body.edit-mode img:hover { outline-color: #2563eb; filter: brightness(0.85); }
 </div>
 <script>
 (function(){
-if(localStorage.getItem('da-splash-seen')){
-  var s=document.getElementById('splash');if(s)s.remove();return;
-}
 var cv=document.getElementById('splash-cv'),ctx=cv.getContext('2d');
 var W=1080,H=1920,start=performance.now(),DUR=7.5;
 var dpr=window.devicePixelRatio||1;
@@ -2495,8 +2492,7 @@ function loop(){
 
 function dismiss(){
   if(done)return;done=true;
-  localStorage.setItem('da-splash-seen','1');
-  var el=document.getElementById('splash');
+    var el=document.getElementById('splash');
   if(el){
     el.classList.add('hide');
     setTimeout(function(){el.remove();},850);
