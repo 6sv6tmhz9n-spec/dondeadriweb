@@ -345,7 +345,7 @@ image-slot {
 .drawer {
   position: fixed; top: 0; right: 0; height: 100%; width: min(82vw, 360px);
   background: linear-gradient(165deg, var(--cream) 0%, var(--pink-wash) 100%);
-  z-index: 80; overflow: hidden;
+  z-index: 80; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch;
   transform: translateX(100%); transition: transform .42s var(--ease);
   display: flex; flex-direction: column; padding: 26px;
   box-shadow: -20px 0 50px -30px rgba(92,51,23,.6);
@@ -383,6 +383,17 @@ image-slot {
 .drawer .nav-link.active {
   background: linear-gradient(135deg, var(--accent), var(--accent-deep)); color: #fff;
   box-shadow: 0 12px 24px -14px var(--accent-deep);
+}
+@media (max-height: 720px) {
+  .drawer { padding: 18px 22px; }
+  .drawer-head { margin-bottom: 6px; }
+  .drawer-kicker { margin: 2px 0 6px; font-size: 1.25rem; }
+  .drawer nav { gap: 2px; }
+  .drawer .nav-link { padding: 7px 10px; font-size: .98rem; }
+  .drawer .nav-ic { width: 34px; height: 34px; }
+  .drawer-spacer { min-height: 6px; }
+  .drawer-social { margin-top: 12px; }
+  .drawer-social .hs-btn { width: 40px; height: 40px; }
 }
 .drawer .nav-link.active .nav-ic { background: rgba(255,255,255,0.25); color: #fff; }
 .drawer-spacer { flex: 1; min-height: 12px; }
